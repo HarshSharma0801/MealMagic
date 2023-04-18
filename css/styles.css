@@ -1,0 +1,53 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+
+}
+
+
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-weight: bolder;
+
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-weight: bolder;
+
+}
+
+
+
+a {
+  text-decoration: none;
+  
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+
+}
+#number:hover{
+  color: blue;
+}
+#login{
+  border-radius: 40%;
+}
+#trial{
+  border-radius: 40%;
+}
+#trial2{
+  border-radius: 40%;
+
+}
+.btn-outline-secondary{
+  border-radius: 40%;
+
+}
+.card:hover{
+  top: -20px;
+  
+
+}  
+  
