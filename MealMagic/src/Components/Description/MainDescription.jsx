@@ -21,7 +21,7 @@ const Description = () => {
         </span>
         <br/>
         <div className="pt-8">
-        <button className=" w-48 h-16 rounded-full border-Text-Color border-2 hover:bg-MainTheme text-Text-Color font-bold">
+        <button className=" w-48 h-16 rounded-full border-Text-Color border-2 hover:bg-MainTheme  text-Text-Color font-bold">
          Browse Menu
         </button>
         </div>
