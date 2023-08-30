@@ -1,16 +1,13 @@
-
-
+import Navbar from "./Components/Header/Navbar"
+import Description from "./Components/Description/MainDescription"
+import DisplayCategories from "./Components/CategoriesFood/DisplayCategories"
 function App() {
-  
 
   return (
     <>
-      
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  
-
+    <Navbar/>
+    <Description/>
+    <DisplayCategories/>
     </>
   )
 }
