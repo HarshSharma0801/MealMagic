@@ -1,6 +1,10 @@
+import React  from "react";
 import Food from "../../assets/food.jpg";
 import Typed from "react-typed";
 const Description = () => {
+
+  
+
   return (
     <div className="block md:flex px-4 bg-Background-light">
       <div className="block md:flex-1 p-4 rounded-full">
