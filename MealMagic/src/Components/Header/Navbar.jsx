@@ -16,7 +16,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="flex justify-between items-center h-16 px-4 bg-Background-light">
+    <nav className="flex  justify-between items-center h-16 px-4 bg-Background-light ">
       <div>
         <h1 className="cursor-pointer text-MainTheme font-bold text-4xl">MealMagic</h1>
       </div>

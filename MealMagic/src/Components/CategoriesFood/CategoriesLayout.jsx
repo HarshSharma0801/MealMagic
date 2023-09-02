@@ -1,11 +1,22 @@
 import React, { useState, useContext } from "react";
 import ItemsContext from "../../ContextAPI/ItemsContext";
 import { Link } from "react-router-dom";
+
 const CategoriesLayout = (props) => {
+
+
   const ItemCtx = useContext(ItemsContext);
+
+
+
   const [Path, SetPath] = useState("");
+
+
   const clicked = () => {
-    ItemCtx.Selected(props.value);
+    ItemCtx.Selected({
+      value:props.value,
+      name:props.name
+    })
     const SelectedPath = ItemCtx.value;
     SetPath(SelectedPath);
   };

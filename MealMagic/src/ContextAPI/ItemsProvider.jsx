@@ -3,15 +3,18 @@ import ItemsContext from "./ItemsContext";
 
 
 const DefaultValue= {
-    value:''
+    value:'',
+    name:''
   }
+
 
   const ItemSelected = (state,action)=>{
     if(action.type==="SelectedCategory"){
-        const UpdatedValue  = action.item;
-
+        const UpdatedValue  = action.item.value;
+        const Updatedname  = action.item.name;
         return {
-            value:UpdatedValue
+            value:UpdatedValue,
+            name:Updatedname
         }
     }
 
@@ -24,9 +27,11 @@ const ItemsProvider = (props)=>{
         dispatch({ type: "SelectedCategory", item: item });
 
     }
+    
 
     const UpdatedObject = {
-
+        
+        name:ItemState.name,
         value:ItemState.value,
         Selected:ItemSelection
         
