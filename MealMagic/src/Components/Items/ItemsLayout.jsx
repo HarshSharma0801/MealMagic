@@ -16,11 +16,11 @@ const ItemsLayout = (props)=>{
             </div>
             <h5 className="text-2xl md:text-3xl font-medium mt-3">{props.name}</h5>
             <p className="text-slate-500 text-lg mt-3">{props.dsc}</p>
-           <div className="flex justify-between">
-           <div>
+           <div className="grid grid-cols-2 gap-4">
+           <div className="p-4 ">
            <h5 className="text-2xl md:text-3xl font-medium mt-3 p-3">${((props.price)/10).toFixed(2)}</h5>
            </div>
-           <div>
+           <div className="p-4 ">
            <CartForm/>
            </div>
 

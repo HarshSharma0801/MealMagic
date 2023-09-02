@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 import {AiOutlineMenu , AiOutlineClose} from 'react-icons/ai'
-import {BsFillCartCheckFill} from 'react-icons/bs'
+import HeaderCart from './HeaderCart';
 
 
 
@@ -37,13 +37,8 @@ const Navbar = () => {
           </form>
         </li>
       </ul>
-      <div className='pr-6 md:pr-16'>
-      <button className='flex md:flex cursor-pointer font-inherit rounded-full w-32 h-8 pr-2 justify-center border-2 border-MainTheme hover:bg-MainTheme'>
-        <BsFillCartCheckFill className='h-6 w-8'/>
-
-      </button>
-
-      </div>
+      <HeaderCart />
+    
     
 
       <div className='block md:hidden'>

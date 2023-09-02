@@ -15,7 +15,7 @@ const CartForm = (props) => {
   }
   return (
     <form className="form" onSubmit={SubmitHandler}>
-        <Input ref={AmountInputRef} label='Amount' input={{
+        <Input ref={AmountInputRef} label='Amount:' input={{
          
         }}/> 
       <button>+Add</button>
