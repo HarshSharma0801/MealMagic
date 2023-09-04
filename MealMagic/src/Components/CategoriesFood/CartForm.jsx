@@ -7,10 +7,13 @@ const CartForm = (props) => {
   const SubmitHandler = event=>{
     event.preventDefault();
     const EnteredAmount = AmountInputRef.current.value ;
+    console.log("Amount is "+EnteredAmount);
     const EnteredAmountNumber = +EnteredAmount;
     if(EnteredAmount.trim().length===0 || EnteredAmountNumber<1 || EnteredAmountNumber >5){
       return ;
     }
+    
+
 
   }
   return (

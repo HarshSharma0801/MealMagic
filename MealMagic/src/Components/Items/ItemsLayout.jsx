@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import CartForm from "../CategoriesFood/CartForm"
+import CartContext from "../../ContextAPI/CartContext";
 
 
 const ItemsLayout = (props)=>{
+
  
 
     return (
@@ -21,7 +24,7 @@ const ItemsLayout = (props)=>{
            <h5 className="text-2xl md:text-3xl font-medium mt-3 p-3">${((props.price)/10).toFixed(2)}</h5>
            </div>
            <div className="p-4 ">
-           <CartForm/>
+           <CartForm />
            </div>
 
            </div>

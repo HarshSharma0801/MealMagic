@@ -5,7 +5,7 @@ import HeaderCart from './HeaderCart';
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   const [MenuClicked,SetMenuClicked] = useState(false);
   
@@ -37,7 +37,7 @@ const Navbar = () => {
           </form>
         </li>
       </ul>
-      <HeaderCart />
+      <HeaderCart CartClicked={props.clicked} />
     
     
 

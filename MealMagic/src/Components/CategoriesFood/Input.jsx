@@ -6,7 +6,7 @@ const Input =React.forwardRef((props,ref)=>{
 
         <div className='input'>
             <label htmlFor={props.input.id} >{props.label}</label>
-            <input  type='number' defaultValue={1} min={1}/>
+            <input  ref={ref} type='number' defaultValue={1} min={1}/>
         </div>
     )
 }) 
