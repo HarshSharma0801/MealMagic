@@ -41,11 +41,11 @@ const Navbar = (props) => {
     
     
 
-      <div className='block md:hidden'>
+      <div className='z-50 block  md:hidden'>
         {MenuClicked ?<AiOutlineClose className='cursor-pointer text-lg' onClick={ClickedMenu}/> :<AiOutlineMenu className='cursor-pointer text-lg' onClick={ClickedMenu}/>}
       </div>
 
-
+ 
       <div className={MenuClicked ? 'fixed left-0 top-0 w-[60%] h-full bg-Background-light transition ease-in duration-500' : 'hidden'}>
       <h1 className="cursor-pointer text-MainTheme font-bold text-4xl p-4">MealMagic</h1>
 

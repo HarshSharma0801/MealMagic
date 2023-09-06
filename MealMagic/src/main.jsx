@@ -7,11 +7,13 @@ import ItemsProvider from './ContextAPI/ItemsProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ItemsProvider>
+   
     <BrowserRouter>
-    <App />
+   <ItemsProvider>
+   <App />
+   </ItemsProvider>
    </BrowserRouter>
-    </ItemsProvider>
+    
 
    
 

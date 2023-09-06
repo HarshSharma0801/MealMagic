@@ -4,6 +4,8 @@ import './CartForm.css'
 const CartForm = (props) => {
   
   const AmountInputRef = useRef();
+
+
   const SubmitHandler = event=>{
     event.preventDefault();
     const EnteredAmount = AmountInputRef.current.value ;
@@ -12,8 +14,7 @@ const CartForm = (props) => {
     if(EnteredAmount.trim().length===0 || EnteredAmountNumber<1 || EnteredAmountNumber >5){
       return ;
     }
-    
-
+    props.OnAddingCart(EnteredAmountNumber);
 
   }
   return (

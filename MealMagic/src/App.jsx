@@ -18,12 +18,15 @@ function App() {
   const clicked = ()=>{
     SetisShown(true);
   }
+  const closed=()=>{
+    SetisShown(false);
+  }
 
 
 
   return (
     <CartProvider>
-      {isShown && <Cart/>}
+      {isShown && <Cart closed={closed}/>}
  <Navbar clicked={clicked} />
         <Routes>
           <Route path="/" element={<Home />} />

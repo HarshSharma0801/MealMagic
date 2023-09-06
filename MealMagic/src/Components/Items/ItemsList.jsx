@@ -40,6 +40,7 @@ const ItemsList = () => {
               LoadedCategories.map((product) => (
                 <ItemsLayout
                   key={product.id}
+                  id={product.id}
                   img={product.img}
                   name={product.name}
                   price={product.price}

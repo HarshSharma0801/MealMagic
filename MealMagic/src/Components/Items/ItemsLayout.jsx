@@ -4,8 +4,19 @@ import CartContext from "../../ContextAPI/CartContext";
 
 
 const ItemsLayout = (props)=>{
+  const Cartctx = useContext(CartContext);
+  const addToCartHandler = amount =>{
+    
+    Cartctx.addItem({
+      id:props.id,
+      name:props.name,
+      price:props.price/10,
+      amount: amount
+    })
+    
+  }
 
- 
+
 
     return (
         <div key={props.id} className="group relative card bg-silver">
@@ -24,7 +35,7 @@ const ItemsLayout = (props)=>{
            <h5 className="text-2xl md:text-3xl font-medium mt-3 p-3">${((props.price)/10).toFixed(2)}</h5>
            </div>
            <div className="p-4 ">
-           <CartForm />
+           <CartForm OnAddingCart={addToCartHandler}/>
            </div>
 
            </div>
@@ -34,4 +45,5 @@ const ItemsLayout = (props)=>{
     )
 
 }
+
 export default ItemsLayout
