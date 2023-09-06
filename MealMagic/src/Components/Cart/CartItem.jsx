@@ -6,13 +6,22 @@ const CartItem = (props) => {
   return (
     <li className={classes['cart-item']}>
       <div>
-        <h2 className='font-bold'>{props.name}</h2>
+        <div className='flex'>
+          <div className='px-2 w-24 h-24'>
+          <img src={props.img}  alt=''/>
+          </div>
+          <div>
+          <h2 className='font-bold py-6 px-2'>{props.name}<span className={classes.amount}>x {props.amount}</span></h2>
+
+          </div>
+
+        </div>
+        
         <div className={classes.summary}>
           <span className={classes.price}>{price}</span>
-          <span className={classes.amount}>x {props.amount}</span>
         </div>
       </div>
-      <div className={classes.actions}>
+      <div className={classes.actions} >
         <button onClick={props.onRemove}>−</button>
         <button onClick={props.onAdd}>+</button>
       </div>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import CartForm from "../CategoriesFood/CartForm"
 import CartContext from "../../ContextAPI/CartContext";
+import {FcRating} from 'react-icons/fc'
 
 
 const ItemsLayout = (props)=>{
@@ -8,6 +9,7 @@ const ItemsLayout = (props)=>{
   const addToCartHandler = amount =>{
     
     Cartctx.addItem({
+      img:props.img,
       id:props.id,
       name:props.name,
       price:props.price/10,
@@ -28,7 +30,15 @@ const ItemsLayout = (props)=>{
           className="h-full w-full object-cover object-center   lg:h-full lg:w-full"
         />
             </div>
-            <h5 className="text-2xl md:text-3xl font-medium mt-3">{props.name}</h5>
+            <div>
+              <div className="flex justify-between py-2">
+              <h5 className="text-2xl md:text-3xl font-medium mt-3">{props.name}</h5>
+              </div>
+              <div>
+                <h6 className="text-xl">{props.rating}<span className="size-4">⭐</span></h6>
+              </div>
+            </div>
+           
             <p className="text-slate-500 text-lg mt-3">{props.dsc}</p>
            <div className="grid grid-cols-2 gap-4">
            <div className="p-4 ">

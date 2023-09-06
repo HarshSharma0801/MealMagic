@@ -22,6 +22,7 @@
   .price {
     font-weight: bold;
     color: #8EAC50;
+    padding: 0 1rem;
   }
   
   .amount {
@@ -30,6 +31,7 @@
     padding: 0.25rem 0.75rem;
     border-radius: 6px;
     color: #363636;
+    margin-left: 2rem;
   }
   
   .actions {

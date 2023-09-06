@@ -1,12 +1,13 @@
 import React , {useState} from 'react';
 import {AiOutlineMenu , AiOutlineClose} from 'react-icons/ai'
 import HeaderCart from './HeaderCart';
+import { Link } from "react-router-dom";
 
 
 
 
 const Navbar = (props) => {
-
+ const path = "";
   const [MenuClicked,SetMenuClicked] = useState(false);
   
   const ClickedMenu = ()=>{
@@ -17,9 +18,13 @@ const Navbar = (props) => {
 
   return (
     <nav className="flex  justify-between items-center h-16 px-4 bg-Background-light ">
-      <div>
+     
+        <Link to={path}>
+        <div>
         <h1 className="cursor-pointer text-MainTheme font-bold text-4xl">MealMagic</h1>
       </div>
+        </Link>
+        
       <ul className="hidden md:flex">
         <li className="p-4 text-Text-Color hover:text-MainTheme text-xl cursor-pointer">Order Now</li>
         <li className="p-4 text-Text-Color hover:text-MainTheme text-xl cursor-pointer">About Us </li>
