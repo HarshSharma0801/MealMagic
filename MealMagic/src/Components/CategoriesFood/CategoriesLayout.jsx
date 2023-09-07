@@ -23,23 +23,26 @@ const CategoriesLayout = (props) => {
   console.log(ItemCtx.value);
 
   return (
-    <div key={props.id} className="group relative" >
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 hover:">
+    <div key={props.id} className="group relative bg-silver rounded-3xl " >
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-3xl bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 hover:">
         <img
           src={props.img}
           alt="image"
           className="h-full w-full object-cover object-center   lg:h-full lg:w-full"
         />
       </div>
-      <div className="mt-4 flex justify-between">
-        <div className="flex justify-stretch">
+      <div className="mt-4 flex justify-between py-4  px-2 ">
+          <div>
           <h3 className="text-xl text-gray-700 font-bold px-2">{props.name}</h3>
+          </div>
+          <div>
           <Link to={Path===ItemCtx.value && Path}>
             <button onClick={clicked} className=" w-24 h-10  rounded-full border-Text-Color border-2 hover:bg-MainTheme  text-Text-Color font-bold">
               Browse
             </button>
           </Link>
-        </div>
+          </div>
+         
       </div>
     </div>
   );

@@ -1,12 +1,15 @@
-import React , {useRef} from "react";
+import React , {useRef , useState} from "react";
 import Input from "./Input";
 import './CartForm.css'
 const CartForm = (props) => {
   
   const AmountInputRef = useRef();
+  const [Click,SetClick] = useState(false)
 
 
   const SubmitHandler = event=>{
+    SetClick(true)
+    console.log(Click)
     event.preventDefault();
     const EnteredAmount = AmountInputRef.current.value ;
     console.log("Amount is "+EnteredAmount);
@@ -17,6 +20,7 @@ const CartForm = (props) => {
     props.OnAddingCart(EnteredAmountNumber);
 
   }
+  
   return (
     <form className="form" onSubmit={SubmitHandler}>
         <Input ref={AmountInputRef} label='Amount:' input={{

@@ -6,7 +6,7 @@ const Description = () => {
   
 
   return (
-    <div className="block md:flex px-4 bg-Background-light">
+    <div className="block md:flex px-4 bg-Background-light  pt-16">
       <div className="block md:flex-1 p-4 rounded-full">
         <img src={Food} alt="Food" className="rounded-full" />
       </div>
