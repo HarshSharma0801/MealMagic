@@ -6,7 +6,6 @@ import './index.css'
 import ItemsProvider from './ContextAPI/ItemsProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
    
     <BrowserRouter>
    <ItemsProvider>
@@ -18,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    
 
  
-  </React.StrictMode>,
+,
 )

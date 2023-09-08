@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import CategoriesLayout from "./CategoriesLayout";
-import coverImage from '../../assets/tech.jpg'
+import coverImage from '../../assets/imageOne.jpg'
 
 
 

@@ -3,6 +3,7 @@ import CartContext from "../../ContextAPI/CartContext"
 import { useContext } from "react"
 import './CartDesign.css'
 import CartItem from "./CartItem"
+import { Link  } from "react-router-dom";
 
 const Cart =(props)=>{
     const CartCtx = useContext(CartContext);
@@ -37,6 +38,9 @@ const Cart =(props)=>{
   );
   const ordered = () => {
     console.log("Ordering...");
+    props.closed();
+    props.OrderClick();
+
   };
   const hasItems = CartCtx.items.length > 0;
   const totalAmount = `$${CartCtx.totalAmount.toFixed(2)}`
@@ -44,7 +48,7 @@ const Cart =(props)=>{
   const closed=()=>{
     props.closed()
   }
-
+ const path ="Payment"
 
     return(
         <Modal>
@@ -59,9 +63,12 @@ const Cart =(props)=>{
             close
           </button>
           {hasItems && (
-            <button className="button" onClick={ordered}>
+            <Link to={path}>
+             <button className="button" onClick={ordered}>
               Order
             </button>
+            </Link>
+           
           )}
         </div>
         </Modal>

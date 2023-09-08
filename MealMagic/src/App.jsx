@@ -7,8 +7,7 @@ import { useState, useContext } from "react";
 import ItemNotFound from "./Components/Items/ItemNotFound";
 import CartProvider from "./ContextAPI/CartProvider.jsx";
 import Cart from "./Components/Cart/Cart";
-import {loadStripe} from  "@stripe/stripe-js"
-
+import Payment from "./Components/PaymentGateway/PayPalCard";
 
 function App() {
   const Itemctx = useContext(ItemsContext);
@@ -16,11 +15,10 @@ function App() {
   const Path = "/" + Itemctx.value;
   console.log(Path);
 
-  const PaymentKey = "pk_test_51NnoXmSFHehR7P6bVlnz2V2A5VkVFjJYd8Veu7SZNvQYvT35zXs2f9e4dKHu6iyIJkm0uXc1rKjjjq0ksiWBEagA00hLiQAEzM"
-  const StripePromise = loadStripe(PaymentKey);
-  console.log(StripePromise);
 
   const [isShown, SetisShown] = useState(false);
+  const [NavShown, SetNavShown] = useState(true);
+
 
   const clicked = () => {
     SetisShown(true);
@@ -28,14 +26,18 @@ function App() {
   const closed = () => {
     SetisShown(false);
   };
+  const OrderClick = ()=>{
+    SetNavShown(false)
+  }
 
   return (
     <CartProvider>
-      {isShown && <Cart closed={closed} />}
-      <Navbar clicked={clicked} />
+      {isShown && <Cart closed={closed} OrderClick={OrderClick}/>}
+      {NavShown ?       <Navbar clicked={clicked} /> : "" }
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path={Path} element={<ItemsList />} />
+        <Route path="/Payment" element={<Payment />} />
         <Route path="*" element={<ItemNotFound />} />
       </Routes>
     </CartProvider>
