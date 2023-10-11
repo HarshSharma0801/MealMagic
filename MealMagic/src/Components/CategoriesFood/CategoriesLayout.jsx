@@ -36,7 +36,7 @@ const CategoriesLayout = (props) => {
           <h3 className="text-xl text-gray-700 font-bold px-2">{props.name}</h3>
           </div>
           <div>
-          <Link to={Path===ItemCtx.value && Path}>
+          <Link to={"/Item"}>
             <button onClick={clicked} className=" w-24 h-10  rounded-full border-Text-Color border-2 hover:bg-MainTheme  text-Text-Color font-bold">
               Browse
             </button>

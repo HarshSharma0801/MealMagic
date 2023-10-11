@@ -23,6 +23,7 @@ function App() {
   const clicked = () => {
     SetisShown(true);
   };
+  
   const closed = () => {
     SetisShown(false);
   };
@@ -36,7 +37,7 @@ function App() {
       {NavShown ?       <Navbar clicked={clicked} /> : "" }
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path={Path} element={<ItemsList />} />
+        <Route path="/Item" element={<ItemsList />} />
         <Route path="/Payment" element={<Payment />} />
         <Route path="*" element={<ItemNotFound />} />
       </Routes>

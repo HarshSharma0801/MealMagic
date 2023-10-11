@@ -18,7 +18,7 @@ export default {
       'bermuda': '#78dcca',
       'MainTheme' : '#8EAC50',
       'Background-light': '#D0F5BE',
-      'Text-Color': '#17594A'
+      'Text-Color': '#17594A',
     },
     extend: {},
   },

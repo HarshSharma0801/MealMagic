@@ -23,10 +23,19 @@ const CartForm = (props) => {
   
   return (
     <form className="form" onSubmit={SubmitHandler}>
-        <Input ref={AmountInputRef} label='Amount:' input={{
+      <div className="flex-col justify-center"> 
+      <div>
+      <Input ref={AmountInputRef} label='Amount:' input={{
          
         }}/> 
-      <button>+Add</button>
+      </div>
+      <div>
+      <button className="p-2 border-1 px-4 bg-MainTheme text-white rounded-full text-center">+Add</button>
+
+      </div>
+    
+      </div>
+      
     </form>
   );
 };
